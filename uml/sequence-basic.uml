@@ -1,11 +1,11 @@
-@startuml ../img/sequence-basic.png
+@startuml
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: another authentication Response
 @enduml
 
-@startuml ../img/sequence-declaring.png
+@startuml
 actor Foo1
 boundary Foo2
 control Foo3

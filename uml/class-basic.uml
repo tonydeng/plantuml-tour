@@ -1,4 +1,4 @@
-@startuml ../img/class-basic.png
+@startuml
 class TestA {
     -String name
     +int id

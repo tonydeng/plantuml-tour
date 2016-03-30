@@ -1,4 +1,4 @@
-@startuml ../img/ticket.svg
+@startuml
 
 title 售票机控制程序
 
