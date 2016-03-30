@@ -1,0 +1,12 @@
+@startuml ../img/class-basic.png
+class TestA {
+    -String name
+    +int id
+}
+
+class TestB extends TestA{
+   -String desc
+   +String getDesc()
+   +void setDesc(String desc)
+}
+@enduml
