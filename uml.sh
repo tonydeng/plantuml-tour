@@ -26,7 +26,6 @@ generate(){
 
 
 ls $DIR | while read LINE ; do
-	#statements
 	echo $LINE
 	generate $DIR/$LINE
 done
