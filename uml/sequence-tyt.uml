@@ -1,0 +1,20 @@
+@startuml
+
+title 交互流程
+
+Device--> Device: 监听air kiss广播
+APP --> Device: 发送SSID信息的广播信息
+Device --> Device: 通过SSID信息连接网络
+Device -> APP: 收集用户数据，并传输
+APP --> Device :  接受用户数据，并反馈给硬件
+APP -> Server : 上传用户数据
+Server --> Server: 存储用户数据
+Server -> Algorithm : 计算并生成报告
+	note right of Algorithm #aqua
+		通过JNI调用so库
+	end note
+Algorithm -> Server: 返回报告
+Server --> Server: 存储报告
+Server -> APP : 报告反馈到手机
+
+@enduml
