@@ -1,0 +1,23 @@
+@startuml
+
+title To B业务中有Flash设备的连接和读取数据流程
+
+actor Doctor #red
+
+Doctor -> Web: 登录
+Web -> Web : 录入设备信息（蓝牙、名称）
+Web -> Web : 创建Profile
+Web -> Web : 建立Profile和设备信息的关联（Profile和设备只能一对一）
+Doctor -> APP : 登录
+APP -> Web : 选择Profile
+Web -> APP : 返回Profile+设备信息]
+Doctor -> APP : 点击读取数据
+APP -> Device : 连接设备
+APP -> Device : 读取Flash数据
+Device -> Device : 吐出Flash数据并清除已吐出的数据
+Device -> APP : 返回检测的数据
+APP -> Web : 上传选中的Profile和设备吐出的测量数据
+Doctor -> APP : 点击断开连接
+APP -> APP : 断开和设备的蓝牙连接
+
+@enduml
